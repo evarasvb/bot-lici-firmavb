@@ -1,0 +1,33 @@
+// config.js - Configuración del bot
+
+const CONFIG = {
+  // Modo DRY_RUN: true = no hace cambios reales, false = aplica cambios
+  DRY_RUN: true,
+  
+  // Porcentaje mínimo de match para procesar (70%)
+  MIN_MATCH_PERCENTAGE: 70,
+  
+  // Porcentaje target para ajustar precios (95%)
+  PORCENTAJE_TARGET: 0.95,
+  
+  // Umbral inferior y superior para NO ajustar (95% - 115%)
+  UMBRAL_INFERIOR: 0.95,
+  UMBRAL_SUPERIOR: 1.15,
+  
+  // Orden de prioridad de empresas
+  ORDEN_EMPRESAS: [
+    'FirmaVB Aseo',
+    'FirmaVB Mobiliario',
+    'FirmaVB Ferretería',
+    'FirmaVB Desechable',
+    'FirmaVB Ergonomía',
+    'FirmaVB Alimento'
+  ],
+  
+  // Prioridades de match (mayor número = mayor prioridad)
+  PRIORIDADES_MATCH: {
+    PERFECTO: { min: 100, max: 100, prioridad: 1 },
+    ALTO: { min: 94, max: 99, prioridad: 2 },
+    MEDIO: { min: 70, max: 93, prioridad: 3 }
+  }
+};
